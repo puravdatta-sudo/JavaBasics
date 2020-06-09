@@ -19,20 +19,19 @@ public class account {
     }
 
     public double getCurMoney(){ //retrieve current money
-        double money = 0;
 
-        return money;
     }
-    public void addMoney(double money){ //adding moeny to account
+    public void addMoney(double money){ //adding money to account
 
     }
     public void withdrawMoney(double money){ //taking out money from the account
 
     }
-    public void currentTrend(double money){ //give an average trend of the account
+    public void currentTrend(){ //give an average trend of the account
 
     }
-    public void applyInterest(double money){ //adds interest and returns the interest totals
+    public void applyInterest(){ //adds interest and returns the interest totals
 
     }
+    public void 
 }
