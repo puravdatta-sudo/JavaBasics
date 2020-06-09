@@ -33,13 +33,13 @@ public class account {
     public void applyInterest(){ //adds interest and returns the interest totals
 
     }
-    public void getPreviousTransaction(){
+    public void getPreviousTransaction(){ //get the last transaction made on the account
 
     }
-    public void getPreviousDeposit(){
+    public void getPreviousDeposit(){ //get the last deposit made on the account
 
     }
-    public void getBankingHistory(){
+    public void getBankingHistory(){ //get a list of all the movement and format it nicely
 
     }
 
