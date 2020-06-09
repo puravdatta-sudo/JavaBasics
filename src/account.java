@@ -18,7 +18,7 @@ public class account {
 
     }
 
-    public double getCurMoney(){ //retrieve current money
+    public void getCurMoney(){ //retrieve current money
 
     }
     public void addMoney(double money){ //adding money to account
@@ -33,5 +33,14 @@ public class account {
     public void applyInterest(){ //adds interest and returns the interest totals
 
     }
-    public void 
+    public void getPreviousTransaction(){
+
+    }
+    public void getPreviousDeposit(){
+
+    }
+    public void getBankingHistory(){
+
+    }
+
 }
