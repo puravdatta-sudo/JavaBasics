@@ -1,8 +1,19 @@
+/*
+Basic Java:
+System.out.println(); this is a command line print statement.
+Scanner.next() lets you take the user input after your last print statement
+EX:
+                System.out.println("Enter something");
+                String entry = scanner.next();
+                System.out.println(entry);
+*/
 public class account {
-    double currentMoney;
+
     int arraySize = 3000;
     double[] moneyMovement = new double[arraySize];
     double startingMoney = 100.0;
+    double currentMoney=startingMoney;
+
     public account() {
 
     }
@@ -19,6 +30,9 @@ public class account {
 
     }
     public void currentTrend(double money){ //give an average trend of the account
+
+    }
+    public void applyInterest(double money){ //adds interest and returns the interest totals
 
     }
 }
