@@ -18,13 +18,17 @@ public class account {
 
     }
 
-    public void getCurMoney(){ //retrieve current money
+    public double getCurMoney(){ //retrieve current money
+
+        return this.currentMoney;
 
     }
     public void addMoney(double money){ //adding money to account
+        currentMoney=this.currentMoney+money;
 
     }
     public void withdrawMoney(double money){ //taking out money from the account
+
 
     }
     public void currentTrend(){ //give an average trend of the account
