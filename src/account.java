@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.OptionalDouble;
+
 /*
 Basic Java:
 System.out.println(); this is a command line print statement.
@@ -8,9 +12,7 @@ EX:
                 System.out.println(entry);
 */
 public class account {
-
-    int arraySize = 3000;
-    double[] moneyMovement = new double[arraySize];
+    ArrayList<Double> moneyMovement = new ArrayList<Double>();
     double startingMoney = 100.0;
     double currentMoney=startingMoney;
 
@@ -25,25 +27,45 @@ public class account {
     }
     public void addMoney(double money){ //adding money to account
         currentMoney=this.currentMoney+money;
+        moneyMovement.add(money);
 
     }
-    public void withdrawMoney(double money){ //taking out money from the account
-
+    public void subMoney(double money){ //taking out money from the account
+    currentMoney=this.currentMoney+money;
 
     }
-    public void currentTrend(){ //give an average trend of the account
+    public double currentTrend(){ //give an average trend of the account
+        OptionalDouble trend = moneyMovement.stream().mapToDouble(a->a).average();
 
+        return trend.isPresent() ? trend.getAsDouble() : 0;
     }
     public void applyInterest(){ //adds interest and returns the interest totals
 
     }
-    public void getPreviousTransaction(){ //get the last transaction made on the account
-
+    public double getPreviousTransaction() { //get the last transaction made on the account
+        double lastNeg = 0;
+        for (Double aDouble : moneyMovement) {
+            if (aDouble < 0) {
+                lastNeg = aDouble;
+            }
+        }
+        return lastNeg;
     }
-    public void getPreviousDeposit(){ //get the last deposit made on the account
 
+
+    public double getPreviousDeposit(){ //get the last deposit made on the account
+            double lastPos = 0;
+            for (Double aDouble : moneyMovement) {
+                if (aDouble < 0) {
+                    lastPos = aDouble;
+                }
+            }
+
+            return lastPos;
     }
     public void getBankingHistory(){ //get a list of all the movement and format it nicely
+        //Iterator<Double> it = moneyMovement.iterator();
+        moneyMovement.forEach(System.out::println);
 
     }
 
