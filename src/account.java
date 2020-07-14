@@ -15,6 +15,9 @@ public class account {
     ArrayList<Double> moneyMovement = new ArrayList<Double>();
     double startingMoney = 100.0;
     double currentMoney=startingMoney;
+    String randostring = "string";
+
+
 
     public account() {
 
